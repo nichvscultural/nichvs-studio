@@ -1,0 +1,263 @@
+<!DOCTYPE html><html lang="pt-BR"><head><meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Plano Red 2.0 · Transformação Digital de Ponta a Ponta · NICHVS STUDIO</title>
+<meta name="description" content="Plano operacional v2.0 do Ecossistema Red — frameworks globais, artefatos prontos e modelagem da jornada para a Inteligência Infraestrutural. Powered by Nichvs Tecnologia."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
+<style>
+:root{--void:#070b12;--surface:#0c131c;--surface-2:#101a26;--line:#1c2836;--line-soft:#141f2b;
+--text:#E6EDF0;--muted:#7588954;--muted:#76899A;
+--gold:#E3B23C;--red:#E0524D;--green:#5FBE8C;--cyan:#36CFE0;--violet:#9D8CFF;--maxw:1080px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--void);color:var(--text);font-family:"Sora",system-ui,-apple-system,sans-serif;line-height:1.6;font-weight:400;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.5;background-image:linear-gradient(var(--line-soft) 1px,transparent 1px),linear-gradient(90deg,var(--line-soft) 1px,transparent 1px);background-size:62px 62px;-webkit-mask-image:radial-gradient(ellipse at 50% 0,#000,transparent 75%);mask-image:radial-gradient(ellipse at 50% 0,#000,transparent 75%)}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 26px;position:relative;z-index:1}
+a{color:var(--cyan);text-decoration:none}
+.mono{font-family:"Space Mono",ui-monospace,monospace}
+/* sticky reveal bar */
+.revealbar{position:fixed;top:0;left:0;right:0;z-index:60;background:rgba(7,11,18,.86);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.revealbar .in{max-width:var(--maxw);margin:0 auto;padding:10px 26px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.rb-brand{display:flex;align-items:center;gap:11px;font-family:"Sora";font-weight:800;font-size:14px;letter-spacing:.04em}
+.rb-brand svg{width:26px;height:26px}.rb-brand span{color:var(--muted);font-weight:600}
+.rb-btn{font-family:"Space Mono",monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--void);background:var(--gold);border:0;padding:9px 15px;cursor:pointer;transition:filter .2s}
+.rb-btn:hover{filter:brightness(1.1)}
+.rb-btn.off{background:transparent;color:var(--gold);border:1px solid var(--gold)}
+/* hero */
+.cover{padding:120px 0 64px;border-bottom:1px solid var(--line)}
+.cover .vmark{width:84px;height:84px;margin-bottom:28px;filter:drop-shadow(0 0 22px rgba(227,178,60,.4))}
+.eyebrow{font-family:"Space Mono",monospace;font-size:12px;letter-spacing:.26em;text-transform:uppercase;color:var(--gold);display:inline-flex;gap:11px;align-items:center}
+.eyebrow::before{content:"";width:24px;height:1px;background:var(--gold)}
+.cover h1{font-family:"Sora";font-weight:800;font-size:clamp(2.1rem,5.4vw,3.7rem);text-transform:uppercase;letter-spacing:-.02em;line-height:1.02;margin:22px 0 14px}
+.cover h1 .c{color:var(--red)}
+.cover .lead{color:var(--muted);font-weight:300;font-size:clamp(1.05rem,2vw,1.3rem);max-width:60ch}
+.cover .lead b{color:var(--text);font-weight:500}
+.tagrow{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.tg{font-family:"Space Mono",monospace;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);border:1px solid var(--line);padding:6px 10px}
+.tg.gold{color:var(--gold);border-color:var(--gold)}
+.v2{display:inline-block;font-family:"Space Mono",monospace;font-size:12px;color:var(--void);background:var(--gold);padding:4px 10px;letter-spacing:.1em;margin-top:24px;font-weight:700}
+/* sections */
+section{position:relative;z-index:1}
+.sec{padding:72px 0;border-bottom:1px solid var(--line)}
+.sec-no{font-family:"Space Mono",monospace;font-size:12px;color:var(--gold);letter-spacing:.14em}
+.sec h2{font-family:"Sora";font-weight:800;font-size:clamp(1.5rem,3.6vw,2.4rem);text-transform:uppercase;letter-spacing:-.015em;line-height:1.08;margin:8px 0 8px}
+.sec .sub{color:var(--muted);font-weight:300;max-width:64ch;margin-bottom:34px;font-size:clamp(1rem,1.5vw,1.12rem)}
+h3.blk{font-family:"Sora";font-weight:800;text-transform:uppercase;font-size:1.15rem;letter-spacing:-.01em;margin:30px 0 14px;color:var(--text)}
+p.body{color:var(--muted);font-weight:300;max-width:66ch;margin-bottom:14px}
+p.body b{color:var(--text);font-weight:500}
+ul.clean{list-style:none;display:flex;flex-direction:column;gap:0;border-top:1px solid var(--line)}
+ul.clean li{padding:14px 0;border-bottom:1px solid var(--line);color:var(--muted);font-weight:300;display:flex;gap:13px}
+ul.clean li::before{content:"";width:7px;height:7px;background:var(--gold);flex:none;margin-top:8px}
+ul.clean li b{color:var(--text);font-weight:600}
+/* rules grid */
+.rules{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line)}
+@media(max-width:720px){.rules{grid-template-columns:1fr}}
+.rule{background:var(--surface);padding:24px 24px}
+.rule .rn{font-family:"Space Mono",monospace;font-size:12px;color:var(--gold)}
+.rule b{display:block;font-family:"Sora";font-weight:700;margin:8px 0 6px;font-size:1.05rem}
+.rule span{color:var(--muted);font-weight:300;font-size:.92rem}
+/* module cards */
+.mgrid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line)}
+@media(max-width:720px){.mgrid{grid-template-columns:1fr}}
+.mcard{background:var(--surface);padding:28px 26px;--c:var(--gold)}
+.mcard.scrape{--c:var(--red)}.mcard.doc{--c:var(--gold)}.mcard.match{--c:var(--cyan)}.mcard.flow{--c:var(--green)}
+.mcard .mi{width:42px;height:42px;color:var(--c);margin-bottom:16px}
+.mcard .mn{font-family:"Space Mono",monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--c);margin-bottom:8px}
+.mcard h4{font-family:"Sora";font-weight:800;text-transform:uppercase;font-size:1.1rem;margin-bottom:6px}
+.mcard .ms{font-family:"Space Mono",monospace;font-size:12px;color:var(--muted);margin-bottom:14px}
+.mcard p{color:var(--muted);font-weight:300;font-size:.92rem}
+/* dashboards (mockups) */
+.dash{background:var(--surface);border:1px solid var(--line);margin-bottom:18px;overflow:hidden}
+.dash-bar{display:flex;align-items:center;gap:8px;padding:11px 16px;border-bottom:1px solid var(--line);background:var(--surface-2)}
+.dash-bar .dot{width:9px;height:9px;border-radius:50%;background:var(--line)}
+.dash-bar .dt{font-family:"Space Mono",monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-left:8px}
+.dash-bar .dt b{color:var(--c,var(--gold))}
+.dash-body{padding:20px 18px;display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+@media(max-width:640px){.dash-body{grid-template-columns:repeat(2,1fr)}}
+.metric{border:1px solid var(--line);padding:14px}
+.metric .ml{font-family:"Space Mono",monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.metric .mv{font-family:"Sora";font-weight:800;font-size:1.5rem;margin-top:6px;color:var(--c,var(--gold))}
+.dash-foot{padding:11px 16px;border-top:1px solid var(--line);font-family:"Space Mono",monospace;font-size:10.5px;color:var(--muted)}
+/* tables */
+.tbl-wrap{overflow-x:auto;border:1px solid var(--line);margin:6px 0 8px}
+table{width:100%;border-collapse:collapse;font-size:13px;min-width:560px}
+th,td{text-align:left;padding:11px 13px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-family:"Space Mono",monospace;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);background:var(--surface-2);position:sticky;top:0}
+td{color:var(--muted);font-weight:300}td b{color:var(--text);font-weight:600}
+tr:last-child td{border-bottom:0}
+.raci{font-family:"Space Mono",monospace;font-weight:700;text-align:center;width:34px}
+.r-R{color:var(--green)}.r-A{color:var(--gold)}.r-C{color:var(--cyan)}.r-I{color:var(--muted)}
+.tag-ok{font-family:"Space Mono",monospace;font-size:10px;color:var(--green);border:1px solid var(--green);padding:2px 7px}
+.tag-pl{font-family:"Space Mono",monospace;font-size:10px;color:var(--gold);border:1px solid var(--gold);padding:2px 7px}
+/* framework cards */
+.fw{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line)}
+@media(max-width:720px){.fw{grid-template-columns:1fr}}
+.fwc{background:var(--surface);padding:22px 22px}
+.fwc .fk{font-family:"Space Mono",monospace;font-size:11px;color:var(--cyan);letter-spacing:.1em;text-transform:uppercase}
+.fwc b{display:block;font-family:"Sora";font-weight:700;margin:7px 0 5px}
+.fwc span{color:var(--muted);font-weight:300;font-size:.9rem}
+/* spoiler */
+.spoiler{filter:blur(6px);cursor:pointer;transition:filter .18s;background:rgba(54,207,224,.06);border-radius:2px;padding:0 3px;user-select:none}
+.spoiler:hover{background:rgba(54,207,224,.12)}
+.spoiler.revealed{filter:none;user-select:auto;background:transparent}
+.spoiler-note{font-family:"Space Mono",monospace;font-size:11px;color:var(--cyan);border:1px dashed var(--cyan);padding:8px 12px;display:inline-flex;gap:8px;align-items:center;margin-bottom:16px}
+/* phases */
+.phase{display:flex;gap:18px;padding:18px 0;border-bottom:1px solid var(--line)}
+.phase .pn{font-family:"Space Mono",monospace;font-size:13px;color:var(--gold);flex:none;width:62px}
+.phase b{font-family:"Sora";font-weight:700;display:block;margin-bottom:4px}
+.phase span{color:var(--muted);font-weight:300;font-size:.93rem}
+/* callout */
+.callout{border:1px solid var(--violet);background:linear-gradient(180deg,rgba(157,140,255,.07),transparent);padding:22px 24px;margin:20px 0}
+.callout .ct{font-family:"Space Mono",monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--violet);margin-bottom:10px}
+.callout p{color:var(--text);font-weight:300}
+/* footer */
+footer{padding:54px 0 60px}
+.disc{color:var(--muted);font-size:11.5px;font-weight:300;line-height:1.7;max-width:80ch}
+.fbrand{display:flex;align-items:center;gap:12px;margin-bottom:18px;font-family:"Sora";font-weight:800;letter-spacing:.04em}
+.fbrand svg{width:30px;height:30px}.fbrand span{color:var(--muted);font-weight:600}
+@media print{.revealbar{position:static}.spoiler{filter:none}body::before{display:none}}
+</style></head><body>
+
+<div class="revealbar"><div class="in">
+<div class="rb-brand"><svg viewBox="0 0 100 100" aria-hidden="true"><path fill="var(--gold)" d="M26 22 L50 78 L74 22 L61 22 L50 54 L39 22 Z"/></svg><span style="color:var(--text)">NICHVS</span> STUDIO</div>
+<button class="rb-btn off" id="revealAll">Revelar dados de negócio</button>
+</div></div>
+
+<header class="cover"><div class="wrap">
+<svg class="vmark" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="48" r="35" fill="none" stroke="var(--gold)" stroke-width="1" opacity=".3"/><path fill="var(--gold)" d="M26 24 L50 76 L74 24 L61 24 L50 54 L39 24 Z"/></svg>
+<div class="eyebrow">Proposta Técnico-Estratégica · Nichvs Tecnologia</div>
+<h1>Transformação Digital<br>de Ponta a Ponta<br><span class="c">Ecossistema Red</span></h1>
+<p class="lead">O mesmo motor que organizou o ecossistema cultural, transposto para finanças: uma <b>camada de inteligência, não um novo banco.</b> Modelagem da jornada para a <b>Inteligência Infraestrutural</b>, com governança, segurança e conformidade como engenharia.</p>
+<div class="tagrow"><span class="tg gold">VERSÃO 2.0 · OPERACIONAL</span><span class="tg">COBIT</span><span class="tg">ISO 27001</span><span class="tg">NIST CSF</span><span class="tg">DORA</span><span class="tg">DAMA</span><span class="tg">MLOps</span><span class="tg">DevSecOps</span><span class="tg">SAFe</span><span class="tg">Responsible AI</span><span class="tg">Open Finance</span></div>
+<div class="v2">Pronto para diretoria · compliance · bancos parceiros</div>
+</div></header>
+
+<main>
+
+<!-- 01 servico consultivo -->
+<section class="sec"><div class="wrap">
+<div class="sec-no">01</div><h2>Serviço Consultivo · Modelagem da Jornada</h2>
+<p class="sub">Um serviço de valor agregado que desenha, com método, a jornada de uma organização da operação atual até a <b>Inteligência Infraestrutural</b> — onde a complexidade fica invisível e a execução, instantânea.</p>
+<div class="callout"><div class="ct">Compromisso de método</div><p>Todo o processo de consultoria é conduzido sob as <b>melhores práticas, metodologias e frameworks globais</b> de governança, segurança, dados, engenharia ágil, DevOps e inteligência artificial — adaptados à realidade regulatória brasileira.</p></div>
+<h3 class="blk">Frameworks que sustentam o método</h3>
+<div class="fw"><div class="fwc"><div class="fk">COBIT 2019</div><b>Governança & gestão de TI</b><span>Objetivos de governança, papéis (RACI) e métricas alinhando TI à estratégia do grupo.</span></div><div class="fwc"><div class="fk">ISO/IEC 27001</div><b>Segurança da informação</b><span>SGSI com controles do Anexo A:2022 — acesso, criptografia, operações e incidentes.</span></div><div class="fwc"><div class="fk">NIST CSF 2.0</div><b>Postura de cibersegurança</b><span>Govern · Identify · Protect · Detect · Respond · Recover como espinha dorsal de defesa.</span></div><div class="fwc"><div class="fk">DORA (DevOps R&A)</div><b>Métricas de entrega</b><span>Deployment frequency, lead time, change failure rate e MTTR para engenharia de elite.</span></div><div class="fwc"><div class="fk">DAMA-DMBOK</div><b>Governança de dados</b><span>Qualidade, metadados, MDM e segurança de dado tratados como ativo de balanço.</span></div><div class="fwc"><div class="fk">MLOps</div><b>Ciclo de vida de IA</b><span>Versionamento de modelos, CI/CD, feature store e monitoramento de drift.</span></div><div class="fwc"><div class="fk">DevSecOps</div><b>Segurança no pipeline</b><span>SAST/DAST/SCA, gestão de segredos e IaC scanning desde o commit.</span></div><div class="fwc"><div class="fk">SAFe · Spotify</div><b>Ágil em escala</b><span>PI planning e squads/tribes/chapters para coordenar fases e times.</span></div><div class="fwc"><div class="fk">Scrum · Kanban</div><b>Entrega iterativa</b><span>Sprints e fluxo contínuo com WIP controlado por módulo.</span></div><div class="fwc"><div class="fk">Responsible AI</div><b>IA confiável</b><span>Human-in-the-loop, explainability, fairness e auditoria de cada decisão assistida.</span></div><div class="fwc"><div class="fk">Open Finance / FAPI</div><b>Conectividade segura</b><span>APIs padronizadas de consentimento, dados e pagamentos sob perfil de segurança FAPI.</span></div></div>
+<h3 class="blk">Dois modelos consultivos de referência</h3>
+<p class="body">A modelagem é provada em dois domínios distintos. Os números e parâmetros de negócio aparecem <b>borrados por padrão</b> — clique para revelar, ou use o botão no topo.</p>
+<div class="rules">
+<div class="rule"><div class="rn">Modelo A · Financeiro</div><b>Ecossistema Red</b><span>Correspondente bancário, Open Finance e bancarização. Esteira de consignado/portabilidade, melhor oferta e radar regulatório. Ticket e metas: <span class="spoiler" title="clique para revelar">dados em spoiler</span>.</span></div>
+<div class="rule"><div class="rn">Modelo B · Terceiro Setor</div><b>Instituto IDEAS (OSS)</b><span>Organização social de saúde. Prestação de contas auditável, editais &amp; orçamento, finanças &amp; pessoas multi-contrato. Volumes e contratos: <span class="spoiler" title="clique para revelar">dados em spoiler</span>.</span></div>
+</div>
+</div></section>
+
+<!-- 02 arquitetura modular -->
+<section class="sec"><div class="wrap">
+<div class="sec-no">02</div><h2>Arquitetura Composable · Os Módulos Red</h2>
+<p class="sub">A mesma fundação NICHVS STUDIO, vestida para o domínio financeiro. Adote o módulo que resolve o limite atual; escale para o ecossistema completo quando comprovado.</p>
+<div class="mgrid"><div class="mcard scrape"><div style="color:var(--c)"><svg class="mi" viewBox="0 0 100 100"><g fill="currentColor"><rect x="6" y="27" width="28" height="4"/><rect x="14" y="38" width="24" height="4"/><rect x="22" y="49" width="20" height="4"/></g><path fill="currentColor" d="M40 22 L62 78 L86 22 L73 22 L62 52 L51 22 Z"/></svg></div><div class="mn">NICHVS STUDIO · SCRAPE → RedScrape</div><h4>RedScrape</h4><div class="ms">Conectividade & Radar Regulatório</div><p>Open Finance/Pix, conectores de bancos e bureaus, monitor de normas (CMN/BCB, SUSEP, INSS), dedup e webhooks. O evento relevante chega sem polling manual.</p></div><div class="mcard doc"><div style="color:var(--c)"><svg class="mi" viewBox="0 0 100 100"><path fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round" d="M26 14 H60 L78 32 V86 H26 Z"/><path fill="none" stroke="currentColor" stroke-width="4" d="M60 14 V32 H78"/><path fill="currentColor" d="M38 40 L51 70 L64 40 L57 40 L51 56 L45 40 Z"/></svg></div><div class="mn">NICHVS STUDIO · DOC → RedDoc</div><h4>RedDoc</h4><div class="ms">Originação & Formalização</div><p>Leitura de propostas e contratos com rascunho + score e validação humana; antifraude documental; auditoria imutável pronta para prestação de contas.</p></div><div class="mcard match"><div style="color:var(--c)"><svg class="mi" viewBox="0 0 100 100"><g fill="none" stroke="currentColor" stroke-width="3"><path d="M20 30 H40 M20 50 H40 M20 70 H40"/><path d="M40 30 C60 30 60 50 78 50 M40 50 H78 M40 70 C60 70 60 50 78 50"/></g><circle cx="82" cy="50" r="6" fill="currentColor"/></svg></div><div class="mn">NICHVS STUDIO · MATCH → RedMatch</div><h4>RedMatch</h4><div class="ms">Melhor Oferta & Risco</div><p>Score de propensão e elegibilidade em segundos, melhor oferta por margem/convênio/banco e cross-sell contextual com roteamento por política de crédito.</p></div><div class="mcard flow"><div style="color:var(--c)"><svg class="mi" viewBox="0 0 100 100"><path fill="none" stroke="currentColor" stroke-width="1.3" opacity=".8" d="M50 12 L74 22 L86 47 L82 73 L66 86 L44 89 L23 79 L13 58 L17 33 L33 16 Z"/><g fill="currentColor"><circle cx="50" cy="12" r="3"/><circle cx="86" cy="47" r="3"/><circle cx="66" cy="86" r="3"/><circle cx="23" cy="79" r="3"/><circle cx="17" cy="33" r="3"/></g><path fill="currentColor" d="M34 30 L50 68 L66 30 L58 30 L50 52 L42 30 Z"/></svg></div><div class="mn">NICHVS STUDIO · NET → RedFlow Hub</div><h4>RedFlow Hub</h4><div class="ms">Visão 360 & Torre de Comando</div><p>CRM unificado das marcas, esteira e prazos em tempo real com alertas por threshold, comunicação proativa e RBAC + auditoria por papel.</p></div></div>
+</div></section>
+
+<!-- 03 telas -->
+<section class="sec"><div class="wrap">
+<div class="sec-no">03</div><h2>Telas &amp; Dashboards</h2>
+<p class="sub">Interfaces operacionais reais dos módulos. Exposta a formatação e a estrutura; os <b>dados de negócio ficam em spoiler</b>.</p>
+<div class="spoiler-note">⌐ Dados sensíveis borrados · clique em qualquer valor para revelar</div>
+<div class="dash" style="--c:var(--red)"><div class="dash-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dt"><b>RedScrape · Queue Monitor v2.1</b></span></div><div class="dash-body"><div class="metric"><div class="ml">Jobs ativos</div><div class="mv"><span class="spoiler" title="clique para revelar">15</span></div></div><div class="metric"><div class="ml">Aguardando</div><div class="mv"><span class="spoiler" title="clique para revelar">32</span></div></div><div class="metric"><div class="ml">Workers</div><div class="mv">3</div></div><div class="metric"><div class="ml">Falhas</div><div class="mv"><span class="spoiler" title="clique para revelar">2</span></div></div></div><div class="dash-foot">Último scrape (async) · 2 workers paralelos · deadletter DLQ monitorado</div></div><div class="dash" style="--c:var(--gold)"><div class="dash-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dt"><b>RedDoc · Cognitive Transmutation Hub</b></span></div><div class="dash-body"><div class="metric"><div class="ml">Docs/min</div><div class="mv"><span class="spoiler" title="clique para revelar">xx</span></div></div><div class="metric"><div class="ml">Confiança méd.</div><div class="mv"><span class="spoiler" title="clique para revelar">xx%</span></div></div><div class="metric"><div class="ml">Campos</div><div class="mv"><span class="spoiler" title="clique para revelar">xx</span></div></div><div class="metric"><div class="ml">Status</div><div class="mv">ATIVO</div></div></div><div class="dash-foot">Documento → JSON estruturado · score de confiança por campo · validação humana antifraude</div></div><div class="dash" style="--c:var(--cyan)"><div class="dash-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dt"><b>RedMatch · Hierarchical Match Dashboard</b></span></div><div class="dash-body"><div class="metric"><div class="ml">Match score</div><div class="mv"><span class="spoiler" title="clique para revelar">xx.x</span></div></div><div class="metric"><div class="ml">Ofertas</div><div class="mv"><span class="spoiler" title="clique para revelar">xx</span></div></div><div class="metric"><div class="ml">Propensão</div><div class="mv"><span class="spoiler" title="clique para revelar">xx%</span></div></div><div class="metric"><div class="ml">Fila</div><div class="mv"><span class="spoiler" title="clique para revelar">xx</span></div></div></div><div class="dash-foot">Match Scorer v2.1 · suitability e elegibilidade · roteamento por política de crédito</div></div><div class="dash" style="--c:var(--green)"><div class="dash-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dt"><b>RedFlow Hub · Visão 360 do Cliente</b></span></div><div class="dash-body"><div class="metric"><div class="ml">Clientes</div><div class="mv"><span class="spoiler" title="clique para revelar">x.xxx</span></div></div><div class="metric"><div class="ml">Em esteira</div><div class="mv"><span class="spoiler" title="clique para revelar">xxx</span></div></div><div class="metric"><div class="ml">SLA</div><div class="mv">COMPLIANT</div></div><div class="metric"><div class="ml">Alertas</div><div class="mv"><span class="spoiler" title="clique para revelar">xx</span></div></div></div><div class="dash-foot">CRM unificado das marcas · esteira em tempo real · alertas por threshold · RBAC por papel</div></div>
+</div></section>
+
+<!-- 04 roadmap -->
+<section class="sec"><div class="wrap">
+<div class="sec-no">04</div><h2>Roadmap Faseado</h2>
+<p class="sub">Capex contido: cada fase se paga e financia a seguinte. Nada de big-bang — o módulo entra quando o anterior comprova valor.</p>
+<div class="phase"><div class="pn">Fase 0</div><div><b>Diagnóstico, Governança &amp; Segurança</b><span>Baseline por processo, bases legais LGPD/sigilo, DPO, alta disponibilidade, criptografia e antifraude de base.</span></div></div>
+<div class="phase"><div class="pn">Fase 1</div><div><b>RedDoc — Originação &amp; Formalização</b><span>Prova de valor na esteira de consignado/portabilidade. Baixo risco, métrica clara.</span></div></div>
+<div class="phase"><div class="pn">Fase 2</div><div><b>RedFlow Hub — Visão 360 &amp; Torre de Comando</b><span>CRM unificado, esteira em tempo real, RBAC e auditoria por papel.</span></div></div>
+<div class="phase"><div class="pn">Fase 3</div><div><b>RedMatch — Melhor Oferta &amp; Risco</b><span>Propensão, elegibilidade e cross-sell contextual com human-in-the-loop.</span></div></div>
+<div class="phase"><div class="pn">Fase 4</div><div><b>RedScrape — Open Finance &amp; Radar Regulatório</b><span>Conectores de bancos/bureaus, monitor de normas e inteligência setorial.</span></div></div>
+<div class="phase"><div class="pn">Fase 5</div><div><b>Bancarização Plena &amp; IA de Relacionamento</b><span>Próxima melhor ação, retenção e analytics setorial — sempre com conformidade.</span></div></div>
+</div></section>
+
+<!-- 05 frameworks aplicados / artefatos -->
+<section class="sec"><div class="wrap">
+<div class="sec-no">05</div><h2>Artefatos Operacionais Prontos</h2>
+<p class="sub">O que diferencia a v2.0: entregáveis acionáveis, não só narrativa. Prontos para comitê, compliance e auditoria.</p>
+
+<h3 class="blk">5.1 · Matriz RACI</h3>
+<div class="tbl-wrap"><table><thead><tr><th>Atividade / Entregável</th><th>Sponsor Red</th><th>PO Nichvs</th><th>Eng. Nichvs</th><th>Compliance/Jur.</th><th>DPO/Segurança</th><th>IF Parceira</th></tr></thead><tbody><tr><td><b>Workshop de diagnóstico (Fase 0)</b></td><td class="raci r-A">A</td><td class="raci r-R">R</td><td class="raci r-C">C</td><td class="raci r-C">C</td><td class="raci r-C">C</td><td class="raci r-I">I</td></tr><tr><td><b>Baseline de processos & KPIs</b></td><td class="raci r-A">A</td><td class="raci r-R">R</td><td class="raci r-R">R</td><td class="raci r-I">I</td><td class="raci r-C">C</td><td class="raci r-I">I</td></tr><tr><td><b>Governança de dados & bases legais</b></td><td class="raci r-C">C</td><td class="raci r-C">C</td><td class="raci r-I">I</td><td class="raci r-A">A</td><td class="raci r-R">R</td><td class="raci r-C">C</td></tr><tr><td><b>Arquitetura DR/HA & segurança</b></td><td class="raci r-I">I</td><td class="raci r-C">C</td><td class="raci r-R">R</td><td class="raci r-C">C</td><td class="raci r-A">A</td><td class="raci r-I">I</td></tr><tr><td><b>RedDoc — prova de valor</b></td><td class="raci r-A">A</td><td class="raci r-R">R</td><td class="raci r-R">R</td><td class="raci r-C">C</td><td class="raci r-C">C</td><td class="raci r-C">C</td></tr><tr><td><b>Homologação por ambiente (gates)</b></td><td class="raci r-I">I</td><td class="raci r-A">A</td><td class="raci r-R">R</td><td class="raci r-C">C</td><td class="raci r-R">R</td><td class="raci r-C">C</td></tr><tr><td><b>Conectores Open Finance / IF</b></td><td class="raci r-C">C</td><td class="raci r-A">A</td><td class="raci r-R">R</td><td class="raci r-C">C</td><td class="raci r-C">C</td><td class="raci r-R">R</td></tr><tr><td><b>Política Responsible AI</b></td><td class="raci r-C">C</td><td class="raci r-A">A</td><td class="raci r-C">C</td><td class="raci r-R">R</td><td class="raci r-R">R</td><td class="raci r-I">I</td></tr><tr><td><b>Go-live & operação assistida</b></td><td class="raci r-A">A</td><td class="raci r-R">R</td><td class="raci r-R">R</td><td class="raci r-C">C</td><td class="raci r-C">C</td><td class="raci r-C">C</td></tr></tbody></table></div><p class="body" style="margin-top:10px;font-size:12px"><span class="mono r-R">R</span> Responsável · <span class="mono r-A">A</span> Aprovador · <span class="mono r-C">C</span> Consultado · <span class="mono r-I">I</span> Informado</p>
+
+<h3 class="blk">5.2 · Checklist ISO/IEC 27001:2022 (Anexo A)</h3>
+<div class="tbl-wrap"><table><thead><tr><th>Anexo A</th><th>Controle (ISO/IEC 27001:2022)</th><th>Status</th></tr></thead><tbody><tr><td class="mono" style="color:var(--gold)">A.5</td><td><b>Políticas de segurança da informação</b></td><td><span class="tag-pl">Planejado · fase</span></td></tr><tr><td class="mono" style="color:var(--gold)">A.5.15</td><td><b>Controle de acesso (RBAC por marca e papel)</b></td><td><span class="tag-pl">Planejado · fase</span></td></tr><tr><td class="mono" style="color:var(--gold)">A.5.23</td><td><b>Segurança no uso de serviços em nuvem</b></td><td><span class="tag-pl">Planejado · fase</span></td></tr><tr><td class="mono" style="color:var(--gold)">A.5.30</td><td><b>Continuidade de TIC (DR/HA, RTO/RPO)</b></td><td><span class="tag-pl">Planejado · fase</span></td></tr><tr><td class="mono" style="color:var(--gold)">A.6</td><td><b>Triagem, NDAs e conscientização de pessoas</b></td><td><span class="tag-pl">Planejado · fase</span></td></tr><tr><td class="mono" style="color:var(--gold)">A.8.5</td><td><b>Autenticação forte (MFA) e segregação</b></td><td><span class="tag-pl">Planejado · fase</span></td></tr><tr><td class="mono" style="color:var(--gold)">A.8.12</td><td><b>Prevenção a vazamento de dados (DLP)</b></td><td><span class="tag-pl">Planejado · fase</span></td></tr><tr><td class="mono" style="color:var(--gold)">A.8.15</td><td><b>Logs de auditoria imutáveis (prompt+contexto+resposta+usuário)</b></td><td><span class="tag-ok">Base pronta</span></td></tr><tr><td class="mono" style="color:var(--gold)">A.8.24</td><td><b>Criptografia em trânsito e repouso</b></td><td><span class="tag-ok">Base pronta</span></td></tr><tr><td class="mono" style="color:var(--gold)">A.8.25</td><td><b>Ciclo de desenvolvimento seguro (DevSecOps)</b></td><td><span class="tag-pl">Planejado · fase</span></td></tr><tr><td class="mono" style="color:var(--gold)">A.8.28</td><td><b>Codificação segura (SAST/DAST/SCA no pipeline)</b></td><td><span class="tag-pl">Planejado · fase</span></td></tr><tr><td class="mono" style="color:var(--gold)">A.5.7</td><td><b>Inteligência de ameaças & radar regulatório</b></td><td><span class="tag-pl">Planejado · fase</span></td></tr><tr><td class="mono" style="color:var(--gold)">A.5.24</td><td><b>Gestão e resposta a incidentes (PLD/FT)</b></td><td><span class="tag-pl">Planejado · fase</span></td></tr></tbody></table></div>
+
+<h3 class="blk">5.3 · Disponibilidade &amp; Recuperação (DR/HA)</h3>
+<ul class="clean">
+<li><b>Topologia multi-AZ</b> com workers BullMQ redundantes e failover automático.</li>
+<li><b>RTO <span class="spoiler" title="clique para revelar">&lt; 1h</span></b> e <b>RPO <span class="spoiler" title="clique para revelar">&lt; 15min</span></b> para serviços críticos; replicação contínua (Turso/libSQL).</li>
+<li><b>Backups</b> criptografados, testados por restauração periódica; runbooks de incidente versionados.</li>
+<li><b>Degradação graciosa</b>: filas isoladas evitam que um módulo derrube o banco principal.</li>
+</ul>
+
+<h3 class="blk">5.4 · Mapa de Homologação</h3>
+<div class="tbl-wrap"><table><thead><tr><th>Ambiente</th><th>Função</th><th>Dados</th><th>Gates de promoção</th><th>Aprovação</th></tr></thead><tbody><tr><td class="mono" style="color:var(--gold)"><b>DEV</b></td><td>Desenvolvimento</td><td>Dados sintéticos</td><td>Lint · testes unitários · SAST</td><td>Engenharia</td></tr><tr><td class="mono" style="color:var(--gold)"><b>HML</b></td><td>Homologação</td><td>Dados mascarados (anonimizados)</td><td>DAST · SCA · UAT · testes de carga</td><td>QA + PO</td></tr><tr><td class="mono" style="color:var(--gold)"><b>PRÉ-PROD</b></td><td>Espelho de produção</td><td>Subconjunto controlado</td><td>Pen-test · revisão de compliance</td><td>Segurança + Compliance</td></tr><tr><td class="mono" style="color:var(--gold)"><b>PROD</b></td><td>Produção</td><td>Dados reais (cripto + RBAC)</td><td>Aprovação formal · canary · rollback</td><td>Sponsor + Eng.</td></tr></tbody></table></div>
+
+<h3 class="blk">5.5 · KPIs &amp; SLAs</h3>
+<p class="body">Metas numéricas de negócio são alvos de planejamento — viram compromisso só após baseline na Fase 0 (por isso em spoiler).</p>
+<div class="tbl-wrap"><table><thead><tr><th>Indicador</th><th>Framework</th><th>Alvo / SLA</th><th>Definição</th></tr></thead><tbody><tr><td><b>Disponibilidade da plataforma</b></td><td class="mono" style="color:var(--cyan)">SLA</td><td>99,9% mensal</td><td>Uptime de produção (multi-AZ)</td></tr><tr><td><b>Latência de API (p99)</b></td><td class="mono" style="color:var(--cyan)">SLA</td><td>&lt; 800 ms</td><td>Resposta sob carga</td></tr><tr><td><b>MTTR (recuperação)</b></td><td class="mono" style="color:var(--cyan)">SLA</td><td><span class="spoiler" title="clique para revelar">&lt; 30 min</span></td><td>Tempo médio de restauração</td></tr><tr><td><b>Deployment frequency</b></td><td class="mono" style="color:var(--cyan)">DORA</td><td><span class="spoiler" title="clique para revelar">semanal+</span></td><td>Cadência de entrega</td></tr><tr><td><b>Change failure rate</b></td><td class="mono" style="color:var(--cyan)">DORA</td><td><span class="spoiler" title="clique para revelar">&lt; 15%</span></td><td>Falhas por mudança</td></tr><tr><td><b>Precisão de extração (RedDoc)</b></td><td class="mono" style="color:var(--cyan)">Qualidade</td><td><span class="spoiler" title="clique para revelar">alvo pós-baseline</span></td><td>Acerto com score de confiança</td></tr><tr><td><b>Taxa de recusa/retrabalho</b></td><td class="mono" style="color:var(--cyan)">Negócio</td><td><span class="spoiler" title="clique para revelar">redução vs baseline</span></td><td>Eficiência da esteira</td></tr><tr><td><b>Conversão da esteira</b></td><td class="mono" style="color:var(--cyan)">Negócio</td><td><span class="spoiler" title="clique para revelar">alvo pós-baseline</span></td><td>Proposta → formalização</td></tr></tbody></table></div>
+
+<h3 class="blk">5.6 · Política de Responsible AI</h3>
+<ul class="clean">
+<li><b>Human-in-the-loop</b>: nenhuma decisão automática de crédito; a IF parceira analisa e decide.</li>
+<li><b>Explicabilidade &amp; score de confiança</b> em cada extração e recomendação, com validação humana.</li>
+<li><b>Fairness</b>: monitoramento de viés em propensão/elegibilidade; suitability na oferta de seguros.</li>
+<li><b>Auditoria imutável</b>: prompt + contexto + resposta + usuário registrados para prestação de contas.</li>
+<li><b>Governança de modelos (MLOps)</b>: versionamento, aprovação e monitoramento de drift.</li>
+</ul>
+
+<h3 class="blk">5.7 · Cronograma &amp; Estimativas</h3>
+<p class="body">Esforço e investimento por fase — <b>dados de negócio em spoiler</b>.</p>
+<div class="tbl-wrap"><table><thead><tr><th>Fase</th><th>Escopo</th><th>Esforço estimado</th><th>Faixa de investimento</th></tr></thead><tbody><tr><td class="mono" style="color:var(--gold)"><b>Fase 0</b></td><td><b>Diagnóstico, governança & segurança</b></td><td><span class="spoiler" title="clique para revelar">xxx h</span></td><td><span class="spoiler" title="clique para revelar">R$ xx.xxx – xx.xxx</span></td></tr><tr><td class="mono" style="color:var(--gold)"><b>Fase 1</b></td><td><b>RedDoc — originação & formalização</b></td><td><span class="spoiler" title="clique para revelar">xxx h</span></td><td><span class="spoiler" title="clique para revelar">R$ xx.xxx – xx.xxx</span></td></tr><tr><td class="mono" style="color:var(--gold)"><b>Fase 2</b></td><td><b>RedFlow Hub — visão 360 & torre de comando</b></td><td><span class="spoiler" title="clique para revelar">xxx h</span></td><td><span class="spoiler" title="clique para revelar">R$ xx.xxx – xx.xxx</span></td></tr><tr><td class="mono" style="color:var(--gold)"><b>Fase 3</b></td><td><b>RedMatch — melhor oferta & risco</b></td><td><span class="spoiler" title="clique para revelar">xxx h</span></td><td><span class="spoiler" title="clique para revelar">R$ xx.xxx – xx.xxx</span></td></tr><tr><td class="mono" style="color:var(--gold)"><b>Fase 4</b></td><td><b>RedScrape — Open Finance & radar regulatório</b></td><td><span class="spoiler" title="clique para revelar">xxx h</span></td><td><span class="spoiler" title="clique para revelar">R$ xx.xxx – xx.xxx</span></td></tr><tr><td class="mono" style="color:var(--gold)"><b>Fase 5</b></td><td><b>Bancarização plena & IA de relacionamento</b></td><td><span class="spoiler" title="clique para revelar">xxx h</span></td><td><span class="spoiler" title="clique para revelar">R$ xx.xxx – xx.xxx</span></td></tr></tbody></table></div>
+</div></section>
+
+<!-- 06 conformidade -->
+<section class="sec"><div class="wrap">
+<div class="sec-no">06</div><h2>Conformidade Regulatória</h2>
+<p class="sub">A camada regulatória é requisito de engenharia desde a Fase 0 — não verniz final. É o que separa um piloto de uma operação sustentável.</p>
+<ul class="clean">
+<li><b>LGPD</b> — bases legais explícitas, minimização, criptografia, direitos do titular, consentimento e atuação do DPO/ANPD.</li>
+<li><b>BACEN · CMN 4.935/2021</b> — atuação como correspondente bancário; o grupo não concede crédito nem é instituição financeira.</li>
+<li><b>SUSEP · Open Insurance</b> — corretagem com transparência, dever de informação e suitability.</li>
+<li><b>LC 105/2001</b> — sigilo bancário; segregação de dados e acesso por marca e papel, com trilha de auditoria.</li>
+<li><b>INSS · eSocial</b> — margem, averbação e Crédito do Trabalhador; trilha de consentimento e vedação a oferta indevida.</li>
+<li><b>PLD/FT · KYC</b> — prevenção à lavagem, biometria, validação documental e cruzamento em tempo real.</li>
+</ul>
+</div></section>
+
+<!-- 07 comecar -->
+<section class="sec"><div class="wrap">
+<div class="sec-no">07</div><h2>Como Começar</h2>
+<div class="rules">
+<div class="rule"><div class="rn">Passo 1</div><b>Workshop de Diagnóstico</b><span>Sessão com TI, originação, banco, seguros e SIPROCREDI/SC para mapear sistemas, dores e quick wins. Define a Fase 0.</span></div>
+<div class="rule"><div class="rn">Passo 2</div><b>Prova de Valor (RedDoc)</b><span>Piloto controlado na esteira de consignado/portabilidade — baixo risco, retorno mensurável em poucas semanas.</span></div>
+<div class="rule"><div class="rn">Passo 3</div><b>Plano &amp; Governança</b><span>Com baseline em mãos: cronograma, orçamento por fase e comitê de governança (dados, compliance, antifraude) formalizado.</span></div>
+<div class="rule"><div class="rn">Passo 4</div><b>Escala Modular</b><span>Cada módulo entra quando o anterior comprova valor, até a singularidade operacional do ecossistema.</span></div>
+</div>
+</div></section>
+
+</main>
+
+<footer><div class="wrap">
+<div class="fbrand"><svg viewBox="0 0 100 100" aria-hidden="true"><path fill="var(--gold)" d="M26 22 L50 78 L74 22 L61 22 L50 54 L39 22 Z"/></svg><span style="color:var(--text)">NICHVS</span> STUDIO</div>
+<p class="disc">A relação é sua. A tecnologia: Red — vertical financeira da família Culta, <b>powered by Nichvs Tecnologia</b>. Documento de proposta técnico-estratégica preparado para fins de planejamento (v2.0). Não constitui contrato, proposta comercial vinculante, parecer jurídico, avaliação (valuation) formal nem aconselhamento financeiro ou de investimento. Metas e direções são referências de mercado, a serem confirmadas por baseline (Fase 0) e diligência conjunta com as áreas das marcas e das instituições financeiras parceiras. Frameworks citados (COBIT, ISO/IEC 27001, NIST CSF, DORA, DAMA-DMBOK, MLOps, DevSecOps, SAFe, Scrum, Kanban, Responsible AI, Open Finance/FAPI) são referências de mercado aplicadas como método. Marcas e normas pertencem aos respectivos titulares.</p>
+</div></footer>
+
+<script>(function(){
+"use strict";
+var sps=document.querySelectorAll(".spoiler");
+for(var i=0;i<sps.length;i++){sps[i].addEventListener("click",function(){this.classList.toggle("revealed");});}
+var btn=document.getElementById("revealAll");var on=false;
+btn.addEventListener("click",function(){
+ on=!on;
+ for(var i=0;i<sps.length;i++){if(on){sps[i].classList.add("revealed");}else{sps[i].classList.remove("revealed");}}
+ btn.textContent=on?"Ocultar dados de negócio":"Revelar dados de negócio";
+ btn.classList.toggle("off",!on);
+});
+})();</script>
+</body></html>
